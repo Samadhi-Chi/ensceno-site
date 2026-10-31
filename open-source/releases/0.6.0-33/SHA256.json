@@ -1,0 +1,23 @@
+{
+  "ADDITIONAL-PERMISSIONS.md": "ecdc09f9f6994b51170fc0c6c1caab831e3e232dc987284a6a8a5731a9e9ca26",
+  "README.md": "0c4e202b624e848fd6fba7437ee0d43da3142dbdfae6b0f3b824c11bf5f63d0e",
+  "SMBDependencySources.zip": "49623a12daead75262c7fcb7f291416f8668011a0c20210ca1206a02af0077e7",
+  "ThirdPartyNotices.txt": "9621ae2bf1eebfc5afcf72e8335b7db8106493c40d45c6976a7519ad3a65ba14",
+  "Unencrypted/ImmersiFin.app/Assets.car": "8cd25aae66694b9a0a2e4461894b375d0eac843be776ddd369cf0c9b24517151",
+  "Unencrypted/ImmersiFin.app/Frameworks/AMSMB2.framework/AMSMB2": "982fc71b0ea8398255fe1c3ca7c403c4b36c49791ae302ae728dc908a260014c",
+  "Unencrypted/ImmersiFin.app/Frameworks/AMSMB2.framework/Info.plist": "4e62d2ad328eb486d04f6cf730ad59a81399c8c739c2360fe734c7151a60fec5",
+  "Unencrypted/ImmersiFin.app/ImmersiFin": "fc85537bd2531bf4e20583ae5b7f689395e7a3a0e03ab39a09b5783e7d5bbd0a",
+  "Unencrypted/ImmersiFin.app/Info.plist": "f32d2c7c8d5b00db735a64561f26404d528a187d9322ca166ece29398efd4048",
+  "Unencrypted/ImmersiFin.app/OpenImmersive_OpenImmersive.bundle/Info.plist": "1d53884dd0165d1abf37daf39f9fe8875e3bd266f11cb194135e052524fc9f8f",
+  "Unencrypted/ImmersiFin.app/OpenImmersive_OpenImmersive.bundle/default.metallib": "c1fea042063123882f2a0465a937e232a6587ed5c300f680be714ff0435bc824",
+  "Unencrypted/ImmersiFin.app/PkgInfo": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0",
+  "Unencrypted/ImmersiFin.app/PlaybackSample.mp4": "cc08144bec4a64ca03f946be2a44ff8023dca564bee79579421324bfe1aaecc4",
+  "Unencrypted/ImmersiFin.app/PrivacyInfo.xcprivacy": "e64ec356fdcf4615d4052b15c7ff4a0355738957abf5ad61eb91ae8102785af2",
+  "Unencrypted/ImmersiFin.app/SMBDependencySources.zip": "49623a12daead75262c7fcb7f291416f8668011a0c20210ca1206a02af0077e7",
+  "Unencrypted/ImmersiFin.app/ThirdPartyNotices.txt": "9621ae2bf1eebfc5afcf72e8335b7db8106493c40d45c6976a7519ad3a65ba14",
+  "Unencrypted/ImmersiFin.app/en.lproj/InfoPlist.strings": "de0553c91db2f4c9d38e9eafb9c46404d0b308d644af836453b7c47a1ad2a514",
+  "Unencrypted/ImmersiFin.app/openimmersive.plist": "1e709ae3689a0b27c3091ccf46c882627a4d601dc27526e61a1074fc4caa33e0",
+  "Unencrypted/ImmersiFin.app/zh-Hans.lproj/InfoPlist.strings": "1d9ed3d674c8bf84e56b6d4ab420feaf04981feef5a6820222d8b4253700d2ec",
+  "Unencrypted/ImmersiFin.app/zh-Hant.lproj/InfoPlist.strings": "95b5ac8db50c7b438f596addaf80d6d93a82b01ede8786fce16eadedeb39abaa",
+  "replace_smb_framework.py": "56e36122c552431785f0dfd30808c9a647e0d868cd12c63558d62aaac93b2fde"
+}

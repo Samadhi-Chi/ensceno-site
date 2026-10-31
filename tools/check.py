@@ -45,7 +45,13 @@ for path, page in pages.items():
         if url.fragment:
             assert target in pages and url.fragment in pages[target].ids, f'Broken anchor: {path}: {url.geturl()}'
 copies = [json.loads((ROOT / 'content' / f'{lang}.json').read_text()) for lang in ('zh','en')]
-for kind in ('help','privacy'):
+for kind in ('help','privacy','open_source'):
     assert [s['id'] for s in copies[0][kind]['sections']] == [s['id'] for s in copies[1][kind]['sections']]
 assert len(copies[0]['help']['sections'][-1]['faqs']) == len(copies[1]['help']['sections'][-1]['faqs'])
+import hashlib
+for manifest_path in (DIST / 'open-source' / 'releases').glob('*/manifest.json'):
+    manifest = json.loads(manifest_path.read_text())
+    archive = manifest_path.parent / manifest['file']
+    assert archive.stat().st_size == manifest['bytes'], f'Archive size mismatch: {archive}'
+    assert hashlib.sha256(archive.read_bytes()).hexdigest() == manifest['sha256'], f'Archive hash mismatch: {archive}'
 print(f'PASS: {len(pages)} pages; local links and anchors; bilingual section parity; no external embeds or scripts.')

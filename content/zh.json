@@ -60,5 +60,34 @@
       {"id":"remote-delete","title":"10. 删除服务器原文件","html":"<p>Jellyfin 影片详情中的“删除服务器原文件”是独立且需要明确确认的操作。App 检查权限并显示服务器返回的路径及范围后，才携带当前账号凭据向所选 Jellyfin 发送删除请求；服务器根据其权限和文件规则执行。</p><p>删除可能包含同目录内的分段、版本、字幕和封面，且无法由 App 撤销。确认页中的文件路径不写入播放诊断，也不自动发送给开发者。SMB 不提供此功能。</p>"},
       {"id":"changes","title":"11. 政策更新","html":"<p>当功能或数据处理方式变化时，我们会更新本页日期与内容。涉及新用途或需要授权的处理时，会按适用要求提供说明并取得必要授权。中英文版本描述同一套处理方式。</p>"}
     ]
+  },
+  "open_source_label": "开源与替换材料",
+  "open_source": {
+    "eyebrow": "开源软件",
+    "title": "开源许可，\n与对应版本的替换材料。",
+    "intro": "入境通过 AMSMB2 与 libsmb2 连接局域网共享。请选择与你的 App 版本及构建号匹配的材料。",
+    "scope": "发布于 2026 年 10 月 31 日 · 当前提供构建 33 的对应材料。本页不是 App Store 安装入口，也不承诺所有修改库均能工作。",
+    "sections": [
+      {
+        "id": "libraries",
+        "title": "使用的开源组件",
+        "html": "<p>AMSMB2 (MIT) + libsmb2 (LGPL 2.1 or later) · <code>AMSMB2.framework</code></p><p><a href=\"../open-source/releases/0.6.0-33/ThirdPartyNotices.txt\">完整著作权声明与许可原文</a></p>"
+      },
+      {
+        "id": "downloads",
+        "title": "0.6.0（33）下载",
+        "html": "<p><a class=\"contact-button\" href=\"../open-source/releases/0.6.0-33/Ensceno-0.6.0-33-SMBReplacementKit-r2.zip\">下载完整替换材料 · 10.9 MB</a></p><p>包含未加密的应用可执行文件与资源、精确库源码、构建说明、替换工具和补充授权。不含 App 私有源码、描述文件、签名私钥或媒体账号。</p><p>SHA-256: <code>9265da89225a51a0ccf2b2f3cb9eec7ace9d1b097fcbc9bfb3f57e5198f9e7b8</code></p><p><a href=\"../open-source/releases/0.6.0-33/SMBDependencySources.zip\">仅下载库源码</a> · <a href=\"../open-source/releases/0.6.0-33/README.md\">构建与替换说明</a> · <a href=\"../open-source/releases/0.6.0-33/manifest.json\">包哈希与版本记录</a></p>"
+      },
+      {
+        "id": "permissions",
+        "title": "补充授权",
+        "html": "<p>入境通过动态链接的 AMSMB2.framework 使用 AMSMB2（MIT）与 libsmb2（GNU LGPL 2.1，或由你选择任何后续版本）。相应著作权声明及完整许可文本随 App 和对应替换材料提供。</p><p>SHENGJIE SUN 允许接收者为自己使用而修改其入境副本，并为调试这些修改进行逆向工程，包括为替换与原接口兼容的 LGPL 库所需的修改。这些权限适用于组合后的作品，不仅适用于库本身。在行使这些权限所需的范围内，本补充授权优先于入境使用条款中的冲突限制。第三方组件继续适用各自的许可及权利。</p><p>每个对外分发版本的对应材料包含精确的库源码和构建说明、未加密的应用可执行文件及所需资源、替换工具。请使用这些材料，无需尝试解密 App Store 下载包。修改后的副本可使用你自己的开发签名身份和 Apple 开发工具，为自己的设备配置并签名；不提供也不需要入境的私有签名密钥。</p><p>本授权不授予对入境专有应用二进制、品牌或私有源码的一般再分发权，也不限制第三方组件许可所授予的再分发等权利。</p><p>支持邮箱：ensceno.app@outlook.com</p>"
+      },
+      {
+        "id": "validation",
+        "title": "验证范围与后续版本",
+        "html": "<p>修改后的源码副本已构建为 visionOS 设备动态库，保留原有 833 个导出符号，替换与本机 ad-hoc 签名校验通过，App 机器码段未改。修改库在 VP 上的实际运行及一次 SMB 浏览、播放仍待完成；这些工程检查不等于法律审查结论。</p><p>安装修改版时使用你自己的开发签名身份和独立 Bundle ID，保留原来的 App 与数据。后续每个对外分发构建会提供对应材料，不要用构建 33 的材料替代其他构建。</p>"
+      }
+    ]
   }
 }

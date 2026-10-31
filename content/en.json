@@ -60,5 +60,34 @@
       {"id":"remote-delete","title":"10. Deleting original files on a server","html":"<p>Delete original files in a Jellyfin video's details is a separate operation requiring explicit confirmation. The app checks permissions and shows the paths and scope returned by the server before sending a deletion request with the current account's credentials to the selected Jellyfin server. The server applies its own permissions and file rules.</p><p>Deletion may include parts, versions, subtitles and artwork in the same directory, and the app cannot undo it. File paths displayed in the confirmation are not written to playback diagnostics or automatically sent to the developer. SMB does not offer this feature.</p>"},
       {"id":"changes","title":"11. Policy updates","html":"<p>We update this page and its date when features or data handling change. Where new purposes or processing require authorization, we provide information and obtain the necessary authorization as applicable. The Chinese and English versions describe the same practices.</p>"}
     ]
+  },
+  "open_source_label": "Open-source materials",
+  "open_source": {
+    "eyebrow": "OPEN-SOURCE SOFTWARE",
+    "title": "Sources, licenses\nand replacement materials.",
+    "intro": "Ensceno uses AMSMB2 and libsmb2 to connect to local SMB shares. Download the materials that match your app version and build.",
+    "scope": "Published 31 October 2026 · Build 33 materials. This page does not distribute an App Store installation or promise support for every modified library.",
+    "sections": [
+      {
+        "id": "libraries",
+        "title": "Included libraries",
+        "html": "<p>AMSMB2 (MIT) + libsmb2 (LGPL 2.1 or later) · <code>AMSMB2.framework</code></p><p><a href=\"../open-source/releases/0.6.0-33/ThirdPartyNotices.txt\">Complete copyright notices and license texts</a></p>"
+      },
+      {
+        "id": "downloads",
+        "title": "0.6.0 (33) downloads",
+        "html": "<p><a class=\"contact-button\" href=\"../open-source/releases/0.6.0-33/Ensceno-0.6.0-33-SMBReplacementKit-r2.zip\">Download full replacement kit · 10.9 MB</a></p><p>Includes the unencrypted executable and resources, exact library sources, build instructions, replacement tool and supplemental permissions. No proprietary app source, provisioning profile, private signing key or media account is included.</p><p>SHA-256: <code>9265da89225a51a0ccf2b2f3cb9eec7ace9d1b097fcbc9bfb3f57e5198f9e7b8</code></p><p><a href=\"../open-source/releases/0.6.0-33/SMBDependencySources.zip\">Library sources only</a> · <a href=\"../open-source/releases/0.6.0-33/README.md\">Build and replacement guide</a> · <a href=\"../open-source/releases/0.6.0-33/manifest.json\">Archive hash and version</a></p>"
+      },
+      {
+        "id": "permissions",
+        "title": "Supplemental permissions",
+        "html": "<p>Ensceno uses AMSMB2 (MIT) and libsmb2 (GNU LGPL version 2.1 or, at your option, any later version) in the dynamically linked AMSMB2.framework. Their copyright notices and complete license texts accompany the app and the corresponding replacement materials.</p><p>SHENGJIE SUN permits recipients to modify their copy of Ensceno for their own use and to reverse engineer it for debugging those modifications, including modifications needed to replace the LGPL-covered library with an interface-compatible version. These permissions apply to the combined work, not only to the library. They prevail over conflicting restrictions in the license terms for Ensceno to the extent necessary to exercise these permissions. Third-party components retain their own licenses and rights.</p><p>For each externally distributed version, the corresponding materials include the exact library source and build instructions, an unencrypted application executable and required resources, and the replacement tool. Use those materials rather than attempting to decrypt an App Store download. A modified copy can be signed with your own development identity and provisioned for your device using Apple&#x27;s developer tools. No Ensceno private signing key is provided or required.</p><p>This permission does not grant a general right to redistribute Ensceno&#x27;s proprietary application binary, branding or private source code. It does not restrict redistribution or other rights granted by the licenses of the third-party components.</p><p>Support: ensceno.app@outlook.com</p>"
+      },
+      {
+        "id": "validation",
+        "title": "Verification and next versions",
+        "html": "<p>A modified source copy was built for a visionOS device, retained all 833 original exports and passed replacement and local ad-hoc signature checks. The app machine-code section was unchanged. Actual execution of the modified library and one SMB browse/play check on Vision Pro remain pending. These engineering checks are not a legal opinion.</p><p>Use your own development signing identity and an independent bundle ID to install a modified copy. Keep your existing app and data. Each future externally distributed build requires matching materials; do not substitute build 33 materials for another build.</p>"
+      }
+    ]
   }
 }
