@@ -22,7 +22,7 @@
     "jellyfin_note":"Explore your library, actors and favorites. Pick up where you left off.",
     "smb":"Connect an SMB share",
     "smb_note":"Play compatible videos already exported to your computer or NAS.",
-    "scope":"Ensceno is a player. It does not provide a film library or video subscription. Use media you are entitled to access and play. This guide covers the features in version 0.6.0.",
+    "scope":"Ensceno is a player. It does not provide a film library or video subscription. Use media you are entitled to access and play. This guide covers versions 0.6.0 and 1.0.",
     "sections":[
       {"id":"start","title":"Open Ensceno for the first time","html":"<p>You need an Apple Vision Pro and either an existing Jellyfin server or a computer / NAS with SMB file sharing enabled. Allow local network access when connecting to a local device for the first time.</p><p>No server ready yet? Choose <strong>Play a sample</strong>. The synthetic video included with the app needs no account or network connection. Try playback in a window, system full screen or your private cinema.</p><p>You can switch between Chinese and English during setup. Media titles, actor names and other information come from your sources; changing the interface language does not automatically translate them.</p>"},
       {"id":"jellyfin","title":"Connect Jellyfin","html":"<ol><li>Choose <strong>Jellyfin</strong> during setup, or add a Jellyfin connection in <strong>Sources</strong>.</li><li>Enter your server address, including <code>http://</code> or <code>https://</code>, its port and any path your server uses. Get the address from your own setup or your server administrator.</li><li>Sign in with your account on that Jellyfin server. You can also use Quick Connect when your server allows it.</li><li>Select the libraries you want to show, let the content load, then open a video to play it.</li></ol><p>At home, Vision Pro and your local server must be on networks that can reach each other. Away from home, your administrator needs to provide a working remote address. Ensceno does not provide a remote relay service.</p><aside>If the same server address does not open in a browser, check the server, network and account first. If it works in the browser but not in Ensceno, note the error message and check local network permission.</aside>"},
@@ -48,7 +48,7 @@
     "date_label":"Updated",
     "summary":"This version has no ads, cross-app tracking or developer-operated behavioral analytics. Playback still communicates with your selected media services. When you send feedback, the developer receives the information you submit.",
     "sections":[
-      {"id":"scope","title":"1. Scope and responsibility","html":"<p>This policy applies to Ensceno (入境) version 0.6.0 and its support website, provided by SHENGJIE SUN. Ensceno is an independent media player for Apple Vision Pro. It does not operate your Jellyfin or SMB server or provide a film library. Public contact information is at the end of this page.</p>"},
+      {"id":"scope","title":"1. Scope and responsibility","html":"<p>This policy applies to Ensceno (入境) and its support website, provided by SHENGJIE SUN. Ensceno is an independent media player for Apple Vision Pro. It does not operate your Jellyfin or SMB server or provide a film library. Public contact information is at the end of this page.</p>"},
       {"id":"connection","title":"2. Connections and authentication","html":"<p>When you add a source, the app sends the information required for sign-in and file access to the Jellyfin or SMB service you specify, to authenticate, read your library and play content. Jellyfin requests also include the app name and version, client device name and an identifier generated on your device, so the server can identify the client and playback session.</p><p>The app does not store your Jellyfin sign-in password. Jellyfin access tokens and SMB passwords used to reconnect are stored separately for each source in your device's Keychain, with protection limited to that device. Source addresses, account names and selected folders are stored locally. These connections do not automatically send your passwords or tokens to the developer.</p><p>Your server and network administrators may log connection IP addresses, accounts, file access and playback activity according to their settings. Connection security also depends on the address, protocol and server configuration you choose.</p>"},
       {"id":"local","title":"3. Information stored on your device","html":"<p>To display your library and resume playback, the app stores media indexes, file and resource identifiers, cached artwork, playback positions, manual metadata corrections, video formats and library presets, playback preferences and browsing state locally. Watch later and custom lists are also stored locally. Cache, system backup and device migration handling additionally depend on Apple's systems and your settings; Keychain credentials use device-only storage.</p><p>Your device reads SMB directories and plays their media directly. The app currently accesses SMB shares in read-only mode.</p>"},
       {"id":"sync","title":"4. Jellyfin sync and media requests","html":"<p>During Jellyfin playback, the app sends start, progress, pause and stop information to the corresponding server for resume playback and session management. Favoriting or unfavoriting videos and actors also sends those actions to the current account for that source.</p><p>Media, subtitles, posters and person images load from your selected service and the resource addresses it supplies. If a resource address belongs to a third party, your device may request it directly; that party receives network information needed to deliver it, such as an IP address. This version does not enable online TMDB matching initiated by the app.</p>"},
@@ -66,12 +66,17 @@
     "eyebrow": "OPEN-SOURCE SOFTWARE",
     "title": "Sources, licenses\nand replacement materials.",
     "intro": "Ensceno uses AMSMB2 and libsmb2 to connect to local SMB shares. Download the materials that match your app version and build.",
-    "scope": "Published 31 October 2026 · Build 33 materials. This page does not distribute an App Store installation or promise support for every modified library.",
+    "scope": "Updated 18 November 2026 · Materials for builds 34 and 33. Select the matching version below.",
     "sections": [
       {
         "id": "libraries",
         "title": "Included libraries",
         "html": "<p>AMSMB2 (MIT) + libsmb2 (LGPL 2.1 or later) · <code>AMSMB2.framework</code></p><p><a href=\"../open-source/releases/0.6.0-33/ThirdPartyNotices.txt\">Complete copyright notices and license texts</a></p>"
+      },
+      {
+        "id": "build34",
+        "title": "1.0 (34) downloads",
+        "html": "<p><a class=\"contact-button\" href=\"../open-source/releases/1.0-34/Ensceno-1.0-34-SMBReplacementKit.zip\">Download full replacement kit · 10.9 MB</a></p><p><a href=\"../open-source/releases/1.0-34/SMBDependencySources.zip\">Exact library sources</a> · <a href=\"../open-source/releases/1.0-34/README.md\">Build and replacement guide</a> · <a href=\"../open-source/releases/1.0-34/manifest.json\">Version and archive hash</a> · <a href=\"../open-source/releases/1.0-34/ThirdPartyNotices.txt\">Full license notices</a></p><p>SHA-256 <code>8055b51a7f2576f927793ab45c1d552b73438c8bada5e8636c50934a02d97a55</code></p>"
       },
       {
         "id": "downloads",
@@ -86,7 +91,7 @@
       {
         "id": "validation",
         "title": "Verification and next versions",
-        "html": "<p>A modified source copy was built for a visionOS device, retained all 833 original exports and passed replacement and local ad-hoc signature checks. The app machine-code section was unchanged. Actual execution of the modified library and one SMB browse/play check on Vision Pro remain pending. These engineering checks are not a legal opinion.</p><p>Use your own development signing identity and an independent bundle ID to install a modified copy. Keep your existing app and data. Each future externally distributed build requires matching materials; do not substitute build 33 materials for another build.</p>"
+        "html": "<p>The build 34 kit comes from the 1.0 archive. An independently signed device copy with a modified library preserved the application code and all required library exports. Verification on a physical Vision Pro is pending.</p>"
       }
     ]
   }

@@ -5,7 +5,7 @@
   "email_registered": true,
   "email_receiving_verified": true,
   "email_sending_verified": true,
-  "policy_date": "2026-10-30",
-  "app_version": "0.6.0",
+  "policy_date": "2026-11-18",
+  "app_version": "1.0",
   "base_url": "https://samadhi-chi.github.io/ensceno-site"
 }

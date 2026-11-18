@@ -22,7 +22,7 @@
     "jellyfin_note": "浏览片库、演员与收藏，继续上次的观看。",
     "smb": "连接 SMB 共享",
     "smb_note": "直接播放电脑或 NAS 中已导出的兼容视频。",
-    "scope": "入境是一款播放器，不提供影视片库或视频订阅。请使用你有权访问和播放的媒体。以下说明适用于 0.6.0 版本的功能范围。",
+    "scope": "入境是一款播放器，不提供影视片库或视频订阅。请使用你有权访问和播放的媒体。本指南适用于 0.6.0 和 1.0 版本。",
     "sections": [
       {"id":"start","title":"第一次打开","html":"<p>你需要一台 Apple Vision Pro，以及已有的 Jellyfin 服务器或启用了 SMB 文件共享的电脑／NAS。首次连接本地设备时，请允许入境访问局域网。</p><p>还没准备好服务器？先选择<strong>播放示例</strong>。随 App 提供的合成视频不需要账号或网络，可以体验窗口播放、系统全屏和私人影院。</p><p>引导页可以切换中文和英文。影片标题、演员名字等资料来自你的媒体来源，不会因为切换界面语言而自动翻译。</p>"},
       {"id":"jellyfin","title":"连接 Jellyfin","html":"<ol><li>在引导页选择 <strong>Jellyfin</strong>，或在<strong>来源</strong>中添加 Jellyfin。</li><li>输入服务器地址，包括 <code>http://</code> 或 <code>https://</code>、端口，以及服务器实际使用的路径。地址应来自你自己或服务器管理员。</li><li>使用这台 Jellyfin 的账号登录；服务器允许时，也可使用界面中的快速连接。</li><li>选择要显示的媒体库，等待内容载入，再打开影片播放。</li></ol><p>在家访问本地服务器时，让 Vision Pro 与服务器处于能够互相访问的网络。外出连接需要服务器管理员配置可用的远程地址；入境本身不提供远程中转服务。</p><aside>如果网页也无法打开同一个服务器地址，先检查服务器、网络和账号；如果网页能打开而入境不能，请记录提示文字，并检查局域网权限。</aside>"},
@@ -48,7 +48,7 @@
     "date_label":"更新日期",
     "summary":"当前版本没有广告、跨 App 跟踪或开发者自建的行为分析服务。播放仍需要与你选择的媒体服务通信；主动发送反馈时，开发者会收到你提交的信息。",
     "sections":[
-      {"id":"scope","title":"1. 适用范围与负责人","html":"<p>本政策适用于 SHENGJIE SUN 提供的入境（Ensceno）0.6.0 版本及其帮助网站。入境是 Apple Vision Pro 上的独立媒体播放器，不经营你的 Jellyfin 或 SMB 服务器，也不提供影视片库。公开联系渠道见本页末尾。</p>"},
+      {"id":"scope","title":"1. 适用范围与负责人","html":"<p>本政策适用于 SHENGJIE SUN 提供的入境（Ensceno）及其帮助网站。入境是 Apple Vision Pro 上的独立媒体播放器，不经营你的 Jellyfin 或 SMB 服务器，也不提供影视片库。公开联系渠道见本页末尾。</p>"},
       {"id":"connection","title":"2. 连接与身份验证","html":"<p>你添加来源时，App 会将登录与文件访问所需的信息发送给你指定的 Jellyfin 或 SMB 服务，以验证身份、读取片库和播放内容。Jellyfin 请求还包含 App 名称与版本、客户端设备名称和本机生成的设备标识，以便服务器识别客户端和播放会话。</p><p>App 不保存 Jellyfin 登录密码。Jellyfin 访问令牌和用于重新连接的 SMB 密码按来源保存在设备的 Keychain 中，并采用仅此设备可用的保护设置。来源地址、账号名称和所选目录保存在本机。开发者不会通过这些连接自动收到你的密码或令牌。</p><p>你的服务器及网络管理员可能根据各自设置记录连接 IP、账号、文件访问和播放活动。连接的安全性也取决于你选择的地址、协议和服务器配置。</p>"},
       {"id":"local","title":"3. 保存在设备上的资料","html":"<p>为显示片库和恢复观看，App 在本机保存媒体索引、文件与资源标识、海报缓存、观看进度、手工资料纠正、视频格式与媒体库预设、播放偏好和浏览状态。“稍后观看”和自建片单也保存在本机。缓存、系统备份及设备迁移的处理还取决于 Apple 系统和你的设置；Keychain 凭据使用仅此设备的存储方式。</p><p>SMB 的目录读取和播放由设备直接完成。App 当前以只读方式访问 SMB 共享。</p>"},
       {"id":"sync","title":"4. Jellyfin 同步与媒体请求","html":"<p>播放 Jellyfin 影片时，App 向对应服务器发送播放开始、进度、暂停和停止信息，用于续播及服务器会话管理。你收藏或取消收藏影片、演员时，相应操作也会发送到该来源的当前账号。</p><p>媒体、字幕、海报和人物图片从你选择的服务及其返回的资源地址加载。若资源地址属于第三方，设备可能直接向其发起请求，对方会收到提供资源所需的网络信息，例如 IP 地址。当前版本未启用 App 主动发起的 TMDB 在线匹配。</p>"},
@@ -66,12 +66,17 @@
     "eyebrow": "开源软件",
     "title": "开源许可，\n与对应版本的替换材料。",
     "intro": "入境通过 AMSMB2 与 libsmb2 连接局域网共享。请选择与你的 App 版本及构建号匹配的材料。",
-    "scope": "发布于 2026 年 10 月 31 日 · 当前提供构建 33 的对应材料。本页不是 App Store 安装入口，也不承诺所有修改库均能工作。",
+    "scope": "更新于 2026 年 11 月 18 日。请选择与你安装的版本和构建号相符的材料。",
     "sections": [
       {
         "id": "libraries",
         "title": "使用的开源组件",
         "html": "<p>AMSMB2 (MIT) + libsmb2 (LGPL 2.1 or later) · <code>AMSMB2.framework</code></p><p><a href=\"../open-source/releases/0.6.0-33/ThirdPartyNotices.txt\">完整著作权声明与许可原文</a></p>"
+      },
+      {
+        "id": "build34",
+        "title": "1.0（34）下载",
+        "html": "<p><a class=\"contact-button\" href=\"../open-source/releases/1.0-34/Ensceno-1.0-34-SMBReplacementKit.zip\">下载完整替换材料 · 10.9 MB</a></p><p><a href=\"../open-source/releases/1.0-34/SMBDependencySources.zip\">精确库源码</a> · <a href=\"../open-source/releases/1.0-34/README.md\">构建与替换说明</a> · <a href=\"../open-source/releases/1.0-34/manifest.json\">版本及文件校验值</a> · <a href=\"../open-source/releases/1.0-34/ThirdPartyNotices.txt\">完整许可声明</a></p><p>SHA-256 <code>8055b51a7f2576f927793ab45c1d552b73438c8bada5e8636c50934a02d97a55</code></p>"
       },
       {
         "id": "downloads",
@@ -86,7 +91,7 @@
       {
         "id": "validation",
         "title": "验证范围与后续版本",
-        "html": "<p>修改后的源码副本已构建为 visionOS 设备动态库，保留原有 833 个导出符号，替换与本机 ad-hoc 签名校验通过，App 机器码段未改。修改库在 VP 上的实际运行及一次 SMB 浏览、播放仍待完成；这些工程检查不等于法律审查结论。</p><p>安装修改版时使用你自己的开发签名身份和独立 Bundle ID，保留原来的 App 与数据。后续每个对外分发构建会提供对应材料，不要用构建 33 的材料替代其他构建。</p>"
+        "html": "<p>构建 34 的材料来自 1.0 归档。替换为修改库的独立设备签名副本已通过本机检查，原应用机器码及所需库接口均已核对。修改库在 Vision Pro 实机上的运行尚待验收。</p>"
       }
     ]
   }
