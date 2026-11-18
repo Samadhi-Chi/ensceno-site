@@ -4,6 +4,8 @@
 
 ## 当前状态
 
+2026-11-18 已发布 1.0（34）的[逐版本替换材料](open-source/releases/1.0-34/README.md)，完整包的大小与 SHA-256 见[下载校验记录](open-source/releases/1.0-34/manifest.json)。公开下载已核对，两种语言的帮助与隐私说明覆盖 1.0。0.6.0（33）的历史下载保留在原地址。
+
 2026-10-30：用户确认 `ensceno.app@outlook.com` 已注册，收信与发信均已验证正常，用作公开支持邮箱。验证依据为用户确认，本轮未代发邮件。公开主体为 SHENGJIE SUN，托管沿用免费 GitHub Pages 方案。中英文帮助和隐私页面已定稿并公开发布，正式构建启用邮件入口。
 
 正式网址：https://samadhi-chi.github.io/ensceno-site/
